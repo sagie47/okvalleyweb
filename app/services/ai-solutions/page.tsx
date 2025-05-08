@@ -45,12 +45,14 @@ export default function AISolutionsPage() {
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <Button
-                    variant="outline"
-                    className="border-slate-400 text-slate-800 hover:bg-slate-100 rounded-full h-14 px-8 text-base"
-                  >
-                    View Our Work
-                  </Button>
+                  <Link href="/blog">
+                    <Button
+                      variant="outline"
+                      className="border-slate-400 text-slate-800 hover:bg-slate-100 rounded-full h-14 px-8 text-base"
+                    >
+                      View Our Work
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="relative">

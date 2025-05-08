@@ -75,7 +75,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               </div>
 
-              <div className="relative w-full h-96 rounded-xl overflow-hidden mb-8">
+              <div className="relative w-full h-[600px] rounded-xl overflow-hidden mb-8">
                 <Image
                   src={post.coverImage || "/placeholder.svg?height=800&width=1200"}
                   fill

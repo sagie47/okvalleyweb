@@ -40,8 +40,8 @@ export default function ContactPage() {
                   icon: <Phone className="h-8 w-8 text-black mb-6" />,
                   title: "Call Us",
                   description: "Speak directly with our team",
-                  action: "(555) 123-4567",
-                  link: "tel:+15551234567",
+                  action: "(778) 769-4402",
+                  link: "tel:+17787694402",
                   buttonText: "Call Now",
                 },
                 {
@@ -56,8 +56,8 @@ export default function ContactPage() {
                   icon: <Mail className="h-8 w-8 text-black mb-6" />,
                   title: "Email Us",
                   description: "Send us a message anytime",
-                  action: "hello@valleyweb.com",
-                  link: "mailto:hello@valleyweb.com",
+                  action: "info@okvallweyweb.com",
+                  link: "mailto:info@okvallweyweb.com",
                   buttonText: "Send Email",
                 },
               ].map((option, index) => (
@@ -94,26 +94,20 @@ export default function ContactPage() {
                 </p>
                 <div className="space-y-8">
                   <div className="flex items-start">
-                    <MapPin className="h-6 w-6 text-black mr-4 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h3 className="font-medium mb-1">Our Location</h3>
-                      <p className="text-slate-600">123 Design Street, Creative City, 10001</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
                     <Mail className="h-6 w-6 text-black mr-4 flex-shrink-0 mt-0.5" />
                     <div>
                       <h3 className="font-medium mb-1">Email Us</h3>
-                      <p className="text-slate-600">hello@valleyweb.com</p>
+                      <p className="text-slate-600">info@okvallweyweb.com</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Phone className="h-6 w-6 text-black mr-4 flex-shrink-0 mt-0.5" />
                     <div>
                       <h3 className="font-medium mb-1">Call Us</h3>
-                      <p className="text-slate-600">(555) 123-4567</p>
+                      <p className="text-slate-600">(778) 769-4402</p>
                     </div>
                   </div>
+                  {/* Address removed as per request */}
                 </div>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-xl">

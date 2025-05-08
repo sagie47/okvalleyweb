@@ -17,7 +17,13 @@ export function SiteFooter() {
               {["twitter", "facebook", "instagram", "linkedin"].map((social) => (
                 <Link
                   key={social}
-                  href={`https://${social}.com`}
+                  href={
+                    social === "instagram"
+                      ? "https://www.instagram.com/okvalleyweb/"
+                      : social === "twitter"
+                      ? "https://x.com/okvalleyweb"
+                      : `https://${social}.com`
+                  }
                   className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-black hover:text-white transition-colors"
                 >
                   <span className="sr-only">{social}</span>
@@ -109,11 +115,11 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="font-heading text-lg mb-6">Company</h3>
+            <h3 className="font-heading text-lg mb-6">Our Work</h3>
             <ul className="space-y-4">
               {[
                 { name: "About Us", path: "/about-us" },
-                { name: "Our Work", path: "/work" },
+                { name: "Our Work", path: "/blog" },
                 { name: "Pricing", path: "/pricing" },
                 { name: "FAQ", path: "/faq" },
               ].map((item) => (
@@ -135,13 +141,10 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li className="flex items-start">
-                <span className="text-slate-500">123 Design Street, Creative City, 10001</span>
+                <span className="text-slate-500">info@okvallweyweb.com</span>
               </li>
               <li className="flex items-start">
-                <span className="text-slate-500">hello@valleyweb.com</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-slate-500">+1 (555) 123-4567</span>
+                <span className="text-slate-500">+1 (778) 769-4402</span>
               </li>
             </ul>
           </div>
@@ -149,7 +152,7 @@ export function SiteFooter() {
 
         <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-500 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} ValleyWeb. All rights reserved.
+            &copy; {new Date().getFullYear()} ValleyWeb. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="text-sm text-slate-500 hover:text-black transition-colors">
