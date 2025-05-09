@@ -33,16 +33,6 @@ export default function AboutUsPage() {
         <section className="py-24 relative -mt-20">
           <div className="container mx-auto px-6 relative z-10">
             <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div className="relative">
-                <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-br from-pink-50 to-blue-50 rounded-full"></div>
-                <Image
-                  src="/placeholder.svg?height=600&width=600"
-                  width={600}
-                  height={600}
-                  alt="Our team"
-                  className="w-full h-auto object-cover rounded-xl shadow-xl"
-                />
-              </div>
               <div>
                 <h2 className="text-4xl font-heading tracking-tight mb-6">Our Story</h2>
                 <div className="w-24 h-1 bg-black mb-6"></div>

@@ -170,10 +170,10 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-heading tracking-tight mb-4">{feature.title}</h3>
                   <p className="text-slate-600 mb-4">{feature.description}</p>
-                  <Link href="#" className="inline-flex items-center text-black hover:underline">
+                  <div className="inline-flex items-center text-black">
                     {feature.cta}
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  </div>
                 </div>
               ))}
             </div>
@@ -384,7 +384,8 @@ export default function Home() {
                     <div
                       key={post.id}
                       onClick={() => post.websiteUrl && window.open(post.websiteUrl, '_blank')}
-                      className="group cursor-pointer">
+                      className="group cursor-pointer"
+                    >
                       <div className="bg-white overflow-hidden rounded-xl transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                         <div className="relative overflow-hidden">
                           <Image
