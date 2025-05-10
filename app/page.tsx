@@ -122,7 +122,7 @@ export default function Home() {
                   title: "Mobile First Design",
                   description:
                     "We start building your site for mobile devices first making sure the code is as lean and optimized with no bloated waste and makes the site even more responsive.",
-                  cta: "Get Started",
+                  cta: "",
                   icon: <Smartphone className="h-8 w-8 text-black" />,
                 },
                 {
@@ -157,7 +157,6 @@ export default function Home() {
                   title: "Based In Canada",
                   description:
                     "We do not hire cheap overseas developers. We are mostly based in Canada with team members in Washington, Texas, Pennsylvania, and the UK and work 100% remote from home.",
-                  cta: "More About Us",
                   icon: <Globe className="h-8 w-8 text-black" />,
                 },
               ].map((feature, index) => (
@@ -170,10 +169,6 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-heading tracking-tight mb-4">{feature.title}</h3>
                   <p className="text-slate-600 mb-4">{feature.description}</p>
-                  <div className="inline-flex items-center text-black">
-                    {feature.cta}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </div>
                 </div>
               ))}
             </div>
