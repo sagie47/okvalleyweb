@@ -11,12 +11,14 @@ const useAppHeight = () => {
 
     window.addEventListener('resize', setAppHeight);
     window.addEventListener('orientationchange', setAppHeight);
+    window.addEventListener('scroll', setAppHeight);
 
     setAppHeight();
 
     return () => {
       window.removeEventListener('resize', setAppHeight);
       window.removeEventListener('orientationchange', setAppHeight);
+      window.removeEventListener('scroll', setAppHeight);
     };
   }, []);
 };
