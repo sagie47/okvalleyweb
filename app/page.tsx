@@ -9,6 +9,7 @@ import { AnimatedText } from "./components/animated-text"
 import { SiteFooter } from "@/components/site-footer"
 import { useEffect, useState } from "react"
 import type { BlogPost } from "@/lib/blog"
+import { AnimatedSection } from "./components/animated-section"
 
 export default function Home() {
   const [recentPosts, setRecentPosts] = useState<BlogPost[]>([])
@@ -39,7 +40,7 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative pt-20 pb-32 overflow-hidden">
+        <AnimatedSection className="relative pt-20 pb-32 overflow-hidden">
           <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-slate-50 to-slate-100 -z-10"></div>
 
           {/* Decorative elements */}
@@ -50,7 +51,7 @@ export default function Home() {
 
           <div className="container mx-auto px-6 relative z-10">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className="space-y-6">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading tracking-tight leading-none md:leading-none lg:leading-none mb-6">
                   We provide
                   <br />
@@ -103,10 +104,10 @@ export default function Home() {
               <path d="M1200 120L0 16.48V0h1200v120z" fill="currentColor"></path>
             </svg>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Features Grid Section */}
-        <section className="py-24 relative bg-slate-50">
+        <AnimatedSection className="py-24 relative bg-slate-50">
           <div className="container mx-auto px-6 relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-heading tracking-tight mb-6">Why Choose Us</h2>
@@ -116,7 +117,11 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-x-12 gap-y-16">
+            <AnimatedSection
+              animation="slide-in-from-bottom"
+              className="grid md:grid-cols-3 gap-x-12 gap-y-16"
+              stagger={100}
+            >
               {[
                 {
                   title: "Mobile First Design",
@@ -171,7 +176,7 @@ export default function Home() {
                   <p className="text-slate-600 mb-4">{feature.description}</p>
                 </div>
               ))}
-            </div>
+            </AnimatedSection>
           </div>
 
           {/* Section divider */}
@@ -185,13 +190,13 @@ export default function Home() {
               <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" fill="currentColor"></path>
             </svg>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Features Section */}
-        <section className="py-24 relative">
+        <AnimatedSection className="py-24 relative">
           <div className="container mx-auto px-6 relative z-10">
             <div className="grid md:grid-cols-2 gap-24 items-center">
-              <div>
+              <AnimatedSection animation="slide-in-from-left">
                 <h2 className="text-4xl font-heading tracking-tight mb-6">
                   Websites starting at $0 down and $175 per month
                 </h2>
@@ -229,8 +234,8 @@ export default function Home() {
                     </Button>
                   </Link>
                 </div>
-              </div>
-              <div className="relative">
+              </AnimatedSection>
+              <AnimatedSection animation="slide-in-from-right" className="relative">
                 <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-br from-pink-50 to-blue-50 rounded-full"></div>
                 <Image
                   src="/images/codes.jpg"
@@ -242,7 +247,7 @@ export default function Home() {
                 <div className="absolute -top-6 -left-6 bg-black text-white p-4 rounded-lg">
                   <div className="text-sm font-heading tracking-widest">RESPONSIVE DESIGN</div>
                 </div>
-              </div>
+              </AnimatedSection>
             </div>
           </div>
 
@@ -260,18 +265,18 @@ export default function Home() {
               ></path>
             </svg>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Testimonials Section */}
-        <section className="py-24 relative bg-slate-50">
+        <AnimatedSection className="py-24 relative bg-slate-50">
           <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-xl mb-16">
+            <AnimatedSection animation="slide-in-from-left" className="max-w-xl mb-16">
               <h2 className="text-4xl font-heading tracking-tight mb-6">What our clients say</h2>
               <div className="w-24 h-1 bg-black mb-6"></div>
               <p className="text-slate-600">
                 Don't just take our word for it. Here's what our clients have to say about working with us.
               </p>
-            </div>
+            </AnimatedSection>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               {[
@@ -352,25 +357,27 @@ export default function Home() {
               <path d="M1200 0L0 0 892.25 114.72 1200 0z" fill="currentColor" opacity="0.05"></path>
             </svg>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Recent Blog Posts Section */}
-        <section className="py-24 relative">
+        <AnimatedSection className="py-24 relative">
           <div className="container mx-auto px-6 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-              <div>
+              <AnimatedSection animation="slide-in-from-left">
                 <h2 className="text-4xl font-heading tracking-tight mb-6">Our Work</h2>
                 <div className="w-24 h-1 bg-black mb-6"></div>
                 <p className="text-slate-600 max-w-2xl">
                   Insights, tips, and strategies to help your business succeed in the digital landscape.
                 </p>
-              </div>
-              <Link href="/blog">
-                <Button className="mt-6 md:mt-0 bg-black hover:bg-slate-800 text-white rounded-full">
-                  View All Articles
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
+              </AnimatedSection>
+              <AnimatedSection animation="slide-in-from-right">
+                <Link href="/blog">
+                  <Button className="mt-6 md:mt-0 bg-black hover:bg-slate-800 text-white rounded-full">
+                    View All Articles
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </AnimatedSection>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -467,10 +474,10 @@ export default function Home() {
               ></path>
             </svg>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* CTA Section */}
-        <section className="py-24 relative bg-black text-white">
+        <AnimatedSection className="py-24 relative bg-black text-white">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black to-slate-800 -z-10"></div>
           <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-pink-500 opacity-10 blur-3xl -z-10"></div>
           <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-blue-500 opacity-10 blur-3xl -z-10"></div>
@@ -493,7 +500,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
       </main>
 
       {/* Footer */}

@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Phone, Menu, ChevronDown } from "lucide-react"
+import { MobileMenu } from "./mobile-menu"
 
 export function SiteHeader() {
   return (
@@ -97,9 +98,7 @@ export function SiteHeader() {
           <Link href="/contact">
             <Button className="bg-black hover:bg-slate-800 text-white rounded-full">Contact Us</Button>
           </Link>
-          <Button variant="ghost" size="icon" className="md:hidden text-slate-600">
-            <Menu className="h-5 w-5" />
-          </Button>
+          <MobileMenu />
         </div>
       </div>
     </header>

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --app-height: 100vh;
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
   --card: 0 0% 100%;
@@ -54,6 +55,11 @@
   body {
     @apply bg-background text-foreground;
   }
+  @media (max-width: 768px) {
+    html, body {
+      overflow-x: hidden;
+    }
+  }
   h1,
   h2,
   h3,
@@ -69,4 +75,62 @@
   div {
     @apply font-sans;
   }
+}
+
+@keyframes-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes-slide-in-from-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes-slide-in-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes-slide-in-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.7s ease-in-out forwards;
+}
+
+.animate-slide-in-from-bottom {
+  animation: slide-in-from-bottom 0.7s ease-in-out forwards;
+}
+
+.animate-slide-in-from-left {
+  animation: slide-in-from-left 0.7s ease-in-out forwards;
+}
+
+.animate-slide-in-from-right {
+  animation: slide-in-from-right 0.7s ease-in-out forwards;
 }

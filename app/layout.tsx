@@ -2,6 +2,7 @@ import type React from "react"
 import "@/app/globals.css"
 import { Space_Grotesk, Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
+import AppHeightProvider from "@/components/app-height-provider"
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -28,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${spaceGrotesk.variable} ${inter.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          {children}
+          <AppHeightProvider>{children}</AppHeightProvider>
         </ThemeProvider>
       </body>
     </html>
