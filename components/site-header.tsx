@@ -93,7 +93,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-6">
           <Button variant="ghost" className="text-slate-600 hover:text-black hover:bg-slate-100 hidden md:flex">
             <Phone className="h-4 w-4 mr-2" />
-            (778) 769-4402
+            (236) 361-5061
           </Button>
           <Link href="/contact">
             <Button className="bg-black hover:bg-slate-800 text-white rounded-full">Contact Us</Button>
