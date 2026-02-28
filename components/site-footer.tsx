@@ -144,7 +144,7 @@ export function SiteFooter() {
                 <span className="text-slate-500">info@okvallweyweb.com</span>
               </li>
               <li className="flex items-start">
-                <span className="text-slate-500">+1 (778) 769-4402</span>
+                <span className="text-slate-500">+1 (236) 361 5061</span>
               </li>
             </ul>
           </div>
